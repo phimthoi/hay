@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="css/styledangky.css"> <!-- Chắc chắn đường dẫn đúng -->
+</head>
+<body>
+    <div class="dk">
+        <form action="#" name="dangnhap" method="post">
+            <table>
+                <tr>
+                    <th colspan="2"><p>ĐĂNG ký</p></th>
+                </tr>
+                <tr><td><p>Tên đăng ký:</p></td> <td><input type="text" maxlength="30" required></td></tr>
+                <tr><td><p>Mật khẩu:</p></td> <td><input type="password" maxlength="30" required></td></tr>
+                <tr><td><p>Nhập lại mật khẩu:</p></td> <td><input type="password" maxlength="30" required></td></tr>
+                <tr><td colspan="2" class="nut"><input type="submit" value="Đăng ký"></td></tr>
+            </table>
+        </form>
+      </div>
+    <script>
+        function dangky() {
+            const user = document.getElementById("username").value.trim();
+            const pass = document.getElementById("password").value.trim();
+            const confirmPassword = document.getElementById("confirmPass").value.trim();
+
+
+            if (user === "admin" && pass === "123" && confirmPass==="123") {
+                // Lưu trạng thái đăng nhập vào localStorage
+                localStorage.setItem("isLoggedIn", "true");
+                alert("Đăng ký thành công!");
+                window.location.href = "dangnhap.html";  <!-- Chuyển tới trang chính -->
+        }
+    }
+    </script>
+</body>
+</html>
